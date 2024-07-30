@@ -1,0 +1,20 @@
+format 224
+
+subject 128002 ""
+  xyzwh 273 118 2000 363 216
+usecasecanvas 128130 usecase_ref 128130 // page
+  xyzwh 406 170 3005 107 53 label_xy 445 187
+end
+classcanvas 128258 class_ref 128130 // user
+  simpleclassdiagramsettings end
+  xyz 170 143 2000
+end
+classcanvas 128386 class_ref 128258 // SI
+  simpleclassdiagramsettings end
+  xyz 699 154 2000
+end
+line 128514 ----
+  from ref 128258 z 3006 to ref 128130
+line 128642 ----
+  from ref 128130 z 3006 to ref 128386
+end

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <?php include "partials/nav.html" ?>
+    <div class="container">
+        <div class="row d-flex justify-content-center py-5">
+
+            <section class="col-md-8">
+                <?php include $partial ?>
+            </section>
+
+            <aside class="col-md-4">
+                <?php if (Session::getMeteo(date("G"))) : ?>
+
+                    <div class="card text-body" style=" border-radius: 35px;">
+                        <div class="card-body">
+
+                            <div class="d-flex">
+                                <h6 class="flex-grow-1"><?= Session::getMeteo(date("G"))['ville'] ?></h6>
+                                <h6><?= date("H:i") ?></h6>
+                            </div>
+
+                            <div class="d-flex flex-column text-center mt-5 mb-4">
+                                <h6 class="display-4 mb-0 font-weight-bold"> <?= Session::getMeteo(date("G"))['heure']['temp'] ?>°C </h6>
+                                <span class="small" style="color: #868B94"><?= Session::getMeteo(date("G"))['heure']['condition'] ?></span>
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1" style="font-size: 1rem;">
+                                    <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <?= Session::getMeteo(date("G"))['heure']['windspeed'] ?> Km/h
+                                        </span>
+                                    </div>
+                                    <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <?= Session::getMeteo(date("G"))['heure']['humidite'] ?> %
+                                        </span></div>
+                                    <div><i class="fas fa-sun fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <?= Session::getMeteo(date("G"))['heure']['pression'] ?> hPa
+                                        </span></div>
+                                </div>
+                                <div>
+                                    <img src="<?= Session::getMeteo(date('G'))['heure']['icon'] ?>" width="50px">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <?php endif ?>
+            </aside>
+
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center py-5">
+        <div class="col-md-10">
+            
+        </div>
+    </div>
+</body>
+
+</html>

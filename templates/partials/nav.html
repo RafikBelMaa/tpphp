@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" style="padding: 0;" href="">
+            <img src="/images/logo.jpg" width="70px" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/CtrlPage/getPage/accueil">Accueil</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Contacts
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/CtrlContact/getForm">Formulaire</a></li>
+                        <?php if (Session::getUser() && Session::getUser()->role == "admin") : ?>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/CtrlContact/listeDesContacts">Liste des contacts</a></li>
+                        <?php endif ?>
+                        <?php if (Session::getUser() && (Session::getUser()->role == "admin" || Session::getUser()->role == "user")) : ?>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="/CtrlContact/getStatistiques">Statistiques</a></li>
+                        <?php endif ?>
+
+                        <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                    </ul>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li> -->
+            </ul>
+            <form class="d-flex" role="search" action="/CtrlMeteo/getMeteo" method="POST">
+                <input class="form-control me-2" name="ville" type="search" placeholder="Saisir une Ville"
+                    aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Météo</button>
+            </form>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <?php if (!Session::getUser()) : ?>
+                    <a class="nav-link" href="/CtrlAuthentification/login">Login</a>
+                    <?php else : ?>
+                    <a class="nav-link" href="/CtrlAuthentification/logout">Logout <span>
+                            <?= Session::getUser()->login ?>
+                        </span></a>
+
+                    <?php endif ?>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,51 @@
+<h2>Liste des Contacts</h2>
+<table class="table">
+    <tr>
+        <th>id</th>
+        <th>civilite</th>
+        <th>nom</th>
+        <th>prénom</th>
+        <th></th>
+<!--         <th></th> -->
+    </tr>
+    <?php foreach ($contacts as $contact) : ?>
+        <tr>
+            <td><?= $contact->id_contact ?></td>
+            <td><?= $contact->libelle ?></td>
+            <td><?= $contact->nom ?></td>
+
+            <td><?= $contact->prenom ?></td>
+            <td><a href="/CtrlContact/modifier/<?= $contact->id_contact ?>" class="btn btn-primary"><i class="bi bi-pencil-square"></i></a></td>
+            <td>
+                <form action="/CtrlContact/delete/<?= $contact->id_contact ?>" method="post">
+                    <input type="hidden" name="valid" value="<?= $contact->id_contact ?>" />
+                    <button class="btn btn-danger" onclick="return confirm('êtes-vous sûr ?')"><i class="bi bi-trash"></i></button>
+                </form>
+            </td>
+<!--             <td>
+                <button class="btn btn-warning" data-url="/CtrlContact/delete/<?= $contact->id_contact ?>"><i class="bi bi-trash"></i></button>
+            </td> -->
+        </tr>
+    <?php endforeach ?>
+</table>
+
+<form id="del" action="" method="post">
+    <input type="hidden" name="valid" value="" />
+</form>
+
+<script>
+/*     window.onload = function() {
+        let boutons = document.querySelectorAll("td:last-of-type button");
+        boutons.forEach(function(e) {
+            e.addEventListener("click", function() {
+                if (confirm('êtes-vous sûr ?')) {
+                    document.getElementById('del').setAttribute('action', this.getAttribute("data-url"));
+                    let segments = this.getAttribute("data-url").split("\/");
+                    let id = segments[segments.length - 1];
+                    document.querySelector("form#del input").value = id;
+                    document.getElementById('del').submit();
+                }
+            });
+        })
+    } */
+</script>

@@ -1,0 +1,34 @@
+<h2>Statistiques</h2>
+ <?php /* var_dump($data) */ ?> 
+<h3>Nb par genres</h3>
+<?php foreach($data['genres'][0] as $genre => $nb) :0 ?>
+<h4><?= $genre ?> : <?= $nb ?></h4>
+<?php endforeach ?>
+
+<h3>contacts par objets</h3>
+<?php foreach($data['contacts'] as $objet => $lignes) :0 ?>
+<h4><?= $objet ?></h4>
+<table class="table">
+    <tr>
+        <th>#</th>
+        <th>civilite</th>
+        <th>nom</th>
+        <th>prenom</th>
+    </tr>
+    <?php foreach ($lignes as $ligne) : ?>
+    <tr>
+        <td><?= $ligne['id_contact'] ?></td>
+        <td><?=$ligne['libelle'] ?></td>
+        <td><?= $ligne['nom'] ?></td>
+        <td><?= $ligne['prenom'] ?></td>
+    </tr>
+    
+    <?php endforeach ?>
+</table>
+
+<?php endforeach ?>
+
+<a href="/CtrlContact/getCsvContacts" class="btn btn-primary">Export CSV</a>
+<a href="/CtrlContact/getJsonContacts" class="btn btn-success">Export JSON</a>
+
+ 

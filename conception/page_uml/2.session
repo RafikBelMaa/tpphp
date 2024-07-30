@@ -1,0 +1,14 @@
+window_sizes 1800 903 450 1345 753 104
+
+diagrams
+  usecasediagram_ref 128130 // uc
+    1076 602 100 A4 0 0
+  active  sequencediagram_ref 128258 // seq
+    1076 602 100 A4 0 0
+end
+show_stereotypes
+selected class_ref 128258 // SI
+open
+  usecaseview_ref 128130 // uc
+end
+end

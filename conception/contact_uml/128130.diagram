@@ -1,0 +1,422 @@
+format 224
+
+classinstance 128002 class_ref 128002 // user
+  name ""   xyz 77 4 2000 life_line_z 2000
+classinstance 128130 class_ref 128130 // SI
+  name ""   xyz 788 4 2000 life_line_z 2000
+classinstance 128258 class_ref 128258 // CtrlContact
+  name ""   xyz 309 21 2000 life_line_z 2000
+classinstance 128770 class_ref 128386 // ViewContact
+  name ""   xyz 176 74 2000 life_line_z 2000
+classinstance 129282 class_ref 128514 // ModelContact
+  name ""   xyz 459 33 2000 life_line_z 2000
+classinstance 129410 class_ref 128642 // DAO
+  name ""   xyz 629 45 2000 life_line_z 2000
+durationcanvas 128386 classinstance_ref 128002 // :user
+  xyzwh 86 56 2010 11 333
+end
+durationcanvas 128514 classinstance_ref 128258 // :CtrlContact
+  xyzwh 337 62 2010 11 293
+end
+durationcanvas 128898 classinstance_ref 128770 // :ViewContact
+  xyzwh 209 305 2010 11 84
+end
+durationcanvas 129538 classinstance_ref 129282 // :ModelContact
+  xyzwh 493 80 2010 11 106
+end
+durationcanvas 129794 classinstance_ref 129410 // :DAO
+  xyzwh 648 96 2010 11 73
+end
+durationcanvas 130050 classinstance_ref 128130 // :SI
+  xyzwh 794 105 2010 11 44
+end
+durationcanvas 130690 classinstance_ref 129282 // :ModelContact
+  xyzwh 493 210 2010 11 102
+end
+durationcanvas 130946 classinstance_ref 129410 // :DAO
+  xyzwh 648 229 2010 11 64
+end
+durationcanvas 131202 classinstance_ref 128130 // :SI
+  xyzwh 794 245 2010 11 32
+end
+durationcanvas 131842 classinstance_ref 128002 // :user
+  xyzwh 86 404 2010 11 289
+end
+durationcanvas 131970 classinstance_ref 128258 // :CtrlContact
+  xyzwh 337 403 2010 11 248
+end
+durationcanvas 132226 classinstance_ref 129282 // :ModelContact
+  xyzwh 493 411 2010 11 87
+end
+durationcanvas 132482 classinstance_ref 129410 // :DAO
+  xyzwh 648 422 2010 11 65
+end
+durationcanvas 132738 classinstance_ref 128130 // :SI
+  xyzwh 794 440 2010 11 42
+end
+durationcanvas 133378 classinstance_ref 128770 // :ViewContact
+  xyzwh 209 587 2010 11 82
+end
+durationcanvas 133762 classinstance_ref 129282 // :ModelContact
+  xyzwh 493 536 2010 11 98
+end
+durationcanvas 134018 classinstance_ref 129410 // :DAO
+  xyzwh 648 544 2010 11 81
+end
+durationcanvas 134274 classinstance_ref 128130 // :SI
+  xyzwh 794 574 2010 11 33
+end
+durationcanvas 134914 classinstance_ref 128002 // :user
+  xyzwh 86 710 2010 11 188
+end
+durationcanvas 135042 classinstance_ref 128258 // :CtrlContact
+  xyzwh 337 710 2010 11 143
+end
+durationcanvas 135298 classinstance_ref 129282 // :ModelContact
+  xyzwh 493 709 2010 11 120
+end
+durationcanvas 135554 classinstance_ref 129410 // :DAO
+  xyzwh 648 733 2010 11 74
+end
+durationcanvas 135810 classinstance_ref 128130 // :SI
+  xyzwh 794 749 2010 11 37
+end
+durationcanvas 136450 classinstance_ref 128770 // :ViewContact
+  xyzwh 209 841 2010 11 44
+end
+durationcanvas 136834 classinstance_ref 128002 // :user
+  xyzwh 86 918 2010 11 209
+end
+durationcanvas 136962 classinstance_ref 128258 // :CtrlContact
+  xyzwh 337 921 2010 11 182
+end
+durationcanvas 137218 classinstance_ref 129282 // :ModelContact
+  xyzwh 493 925 2010 11 93
+end
+durationcanvas 137474 classinstance_ref 129410 // :DAO
+  xyzwh 648 940 2010 11 61
+end
+durationcanvas 137730 classinstance_ref 128130 // :SI
+  xyzwh 794 953 2010 11 30
+end
+durationcanvas 138370 classinstance_ref 128770 // :ViewContact
+  xyzwh 209 1076 2010 11 51
+end
+durationcanvas 139010 classinstance_ref 129282 // :ModelContact
+  xyzwh 493 1029 2010 11 68
+end
+durationcanvas 139266 classinstance_ref 129410 // :DAO
+  xyzwh 648 1040 2010 11 43
+end
+durationcanvas 139522 classinstance_ref 128130 // :SI
+  xyzwh 794 1048 2010 11 33
+end
+msg 128642 asynchronous
+  from durationcanvas_ref 128386
+  to durationcanvas_ref 128514
+  yz 62 2015 explicitmsg "getForm()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 191 45
+msg 129026 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 128898
+  yz 319 2015 explicitmsg "afficherForm()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "civilites, objets"
+  label_xy 189 280
+msg 129154 return
+  from durationcanvas_ref 128898
+  to durationcanvas_ref 128386
+  yz 378 2015 explicitmsg "html"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 144 364
+msg 129666 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 129538
+  yz 80 2015 explicitmsg "selectCivilites()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 386 66
+msg 129922 synchronous
+  from durationcanvas_ref 129538
+  to durationcanvas_ref 129794
+  yz 97 2015 explicitmsg "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 548 83
+msg 130178 asynchronous
+  from durationcanvas_ref 129794
+  to durationcanvas_ref 130050
+  yz 106 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 130306 return
+  from durationcanvas_ref 130050
+  to durationcanvas_ref 129794
+  yz 137 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 130434 return
+  from durationcanvas_ref 129794
+  to durationcanvas_ref 129538
+  yz 151 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 130562 return
+  from durationcanvas_ref 129538
+  to durationcanvas_ref 128514
+  yz 165 2020 explicitmsg "civilites"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 404 151
+msg 130818 synchronous
+  from durationcanvas_ref 128514
+  to durationcanvas_ref 130690
+  yz 210 2015 explicitmsg "selectObjets()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 387 196
+msg 131074 synchronous
+  from durationcanvas_ref 130690
+  to durationcanvas_ref 130946
+  yz 230 2020 explicitmsg "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 548 216
+msg 131330 asynchronous
+  from durationcanvas_ref 130946
+  to durationcanvas_ref 131202
+  yz 246 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 131458 return
+  from durationcanvas_ref 131202
+  to durationcanvas_ref 130946
+  yz 266 2020 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 131586 return
+  from durationcanvas_ref 130946
+  to durationcanvas_ref 130690
+  yz 282 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 131714 return
+  from durationcanvas_ref 130690
+  to durationcanvas_ref 128514
+  yz 301 2015 explicitmsg "objets"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 407 287
+msg 132098 asynchronous
+  from durationcanvas_ref 131842
+  to durationcanvas_ref 131970
+  yz 411 2015 explicitmsg "getStatistiques()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 177 397
+msg 132354 synchronous
+  from durationcanvas_ref 131970
+  to durationcanvas_ref 132226
+  yz 416 2020 explicitmsg "nbParGenre()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 388 402
+msg 132610 synchronous
+  from durationcanvas_ref 132226
+  to durationcanvas_ref 132482
+  yz 422 2025 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 132866 asynchronous
+  from durationcanvas_ref 132482
+  to durationcanvas_ref 132738
+  yz 440 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 132994 return
+  from durationcanvas_ref 132738
+  to durationcanvas_ref 132482
+  yz 458 2020 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 133122 return
+  from durationcanvas_ref 132482
+  to durationcanvas_ref 132226
+  yz 456 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 133250 return
+  from durationcanvas_ref 132226
+  to durationcanvas_ref 131970
+  yz 479 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 133506 synchronous
+  from durationcanvas_ref 131970
+  to durationcanvas_ref 133378
+  yz 640 2020 explicitmsg "afficherStats()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "data"
+  label_xy 232 626
+msg 133634 return
+  from durationcanvas_ref 133378
+  to durationcanvas_ref 131842
+  yz 658 2025 explicitmsg "html"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 144 644
+msg 133890 synchronous
+  from durationcanvas_ref 131970
+  to durationcanvas_ref 133762
+  yz 537 2015 explicitmsg "contactsParObjets()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 373 523
+msg 134146 synchronous
+  from durationcanvas_ref 133762
+  to durationcanvas_ref 134018
+  yz 551 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 134402 asynchronous
+  from durationcanvas_ref 134018
+  to durationcanvas_ref 134274
+  yz 575 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 134530 return
+  from durationcanvas_ref 134274
+  to durationcanvas_ref 134018
+  yz 596 2020 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 134658 return
+  from durationcanvas_ref 134018
+  to durationcanvas_ref 133762
+  yz 614 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 134786 return
+  from durationcanvas_ref 133762
+  to durationcanvas_ref 131970
+  yz 623 2025 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 135170 asynchronous
+  from durationcanvas_ref 134914
+  to durationcanvas_ref 135042
+  yz 712 2015 explicitmsg "exportCsvContacts()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 167 698
+msg 135426 synchronous
+  from durationcanvas_ref 135042
+  to durationcanvas_ref 135298
+  yz 724 2020 explicitmsg "getContacts()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 387 710
+msg 135682 synchronous
+  from durationcanvas_ref 135298
+  to durationcanvas_ref 135554
+  yz 735 2015 msg operation_ref 128386 // "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 547 721
+msg 135938 asynchronous
+  from durationcanvas_ref 135554
+  to durationcanvas_ref 135810
+  yz 749 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 136066 return
+  from durationcanvas_ref 135810
+  to durationcanvas_ref 135554
+  yz 775 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 136194 return
+  from durationcanvas_ref 135554
+  to durationcanvas_ref 135298
+  yz 796 2015 explicitmsg "data"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 566 782
+msg 136322 return
+  from durationcanvas_ref 135298
+  to durationcanvas_ref 135042
+  yz 818 2015 explicitmsg "data"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 410 804
+msg 136578 synchronous
+  from durationcanvas_ref 135042
+  to durationcanvas_ref 136450
+  yz 841 2020 explicitmsg "afficherCsv()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "data"
+  label_xy 235 827
+msg 136706 return
+  from durationcanvas_ref 136450
+  to durationcanvas_ref 134914
+  yz 874 2015 explicitmsg "csv"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 144 860
+msg 137090 asynchronous
+  from durationcanvas_ref 136834
+  to durationcanvas_ref 136962
+  yz 922 2015 explicitmsg "delete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "id_contact"
+  label_xy 174 908
+msg 137346 synchronous
+  from durationcanvas_ref 136962
+  to durationcanvas_ref 137218
+  yz 929 2020 explicitmsg "deleteContact()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "id"
+  label_xy 379 915
+msg 137602 synchronous
+  from durationcanvas_ref 137218
+  to durationcanvas_ref 137474
+  yz 943 2015 msg operation_ref 128386 // "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 547 929
+msg 137858 asynchronous
+  from durationcanvas_ref 137474
+  to durationcanvas_ref 137730
+  yz 954 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 137986 return
+  from durationcanvas_ref 137730
+  to durationcanvas_ref 137474
+  yz 972 2020 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 138114 return
+  from durationcanvas_ref 137474
+  to durationcanvas_ref 137218
+  yz 985 2015 explicitmsg "retour"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 562 971
+msg 138242 return
+  from durationcanvas_ref 137218
+  to durationcanvas_ref 136962
+  yz 998 2015 explicitmsg "retour"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 406 984
+msg 138498 synchronous
+  from durationcanvas_ref 136962
+  to durationcanvas_ref 138370
+  yz 1092 2015 explicitmsg "afficherContacts()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "contacts"
+  label_xy 213 1078
+msg 138626 return
+  from durationcanvas_ref 138370
+  to durationcanvas_ref 136834
+  yz 1116 2015 explicitmsg "html"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 144 1102
+msg 139138 synchronous
+  from durationcanvas_ref 136962
+  to durationcanvas_ref 139010
+  yz 1029 2020 explicitmsg "selectContacts()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 380 1015
+msg 139394 synchronous
+  from durationcanvas_ref 139010
+  to durationcanvas_ref 139266
+  yz 1044 2015 msg operation_ref 128386 // "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 547 1030
+msg 139650 asynchronous
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 139522
+  yz 1048 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 139778 return
+  from durationcanvas_ref 139266
+  to durationcanvas_ref 139010
+  yz 1072 2020 explicitmsg "data"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 566 1058
+msg 139906 return
+  from durationcanvas_ref 139010
+  to durationcanvas_ref 136962
+  yz 1084 2020 explicitmsg "contacts"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 399 1070
+end

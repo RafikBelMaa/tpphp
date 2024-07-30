@@ -1,0 +1,69 @@
+<h1>Contact</h1>
+<!--
+    Modifier le formulaire de contact :
+    ajouter un choix de civilité
+    ajouter un message
+    ajouter un choix pour l'objet du message
+    -->
+<?php if($error) : ?>
+<div class="alert alert-warning">
+    Erreur de saisie
+</div>
+<?php endif ?>
+<form class="align-items-center"
+    action="/CtrlContact/<?= ($contact && isset($contact['id_contact'])) ? 'modifierForm/' . $contact['id_contact'] : 'enregForm'  ?>" method="post">
+    <div class="row form-group mb-3">
+        <label for="" class="form-label col-sm-2 text-end">Civilité : </label>
+        <div class="col-sm-10">
+            <select name="id_civilite">
+                <?php foreach ($civilites as $civilite) : ?>
+                <option value="<?= $civilite->id_civilite ?>" <?=(isset($contact['id_civilite']) && ($civilite->
+                    id_civilite == $contact['id_civilite'])) ? 'selected' : ''; ?>>
+                    <?= $civilite->libelle ?>
+                </option>
+                <?php endforeach ?>
+            </select>
+        </div>
+    </div>
+    <div class="form-group mb-3 row">
+        <label for="" class="form-label col-sm-2 text-end">Nom : </label>
+        <div class="col-sm-10">
+            <input type="text" name="nom" value="<?= isset($contact['nom']) ? $contact['nom'] : ''; ?>"
+                placeholder="Nom">
+        </div>
+    </div>
+    <div class="form-group mb-3 row">
+        <label for="" class="form-label col-sm-2 text-end">Prénom : </label>
+        <div class="col-sm-10">
+            <input type="text" name="prenom" value="<?= isset($contact['prenom']) ? $contact['prenom'] : ''; ?>"
+                placeholder="Prénom">
+        </div>
+    </div>
+    <div class="form-group mb-3 row">
+        <label for="" class="form-label col-sm-2 text-end">Objet : </label>
+        <div class="col-sm-10">
+            <select name="id_objet">
+                <?php foreach ($objets as $objet) : ?>
+                <option value="<?= $objet->id_objet ?>" <?=(isset($contact['id_objet']) && ($objet->id_objet ==
+                    $contact['id_objet'])) ? 'selected' : ''; ?>>
+                    <?= $objet->titre ?>
+                </option>
+                <?php endforeach ?>
+            </select>
+        </div>
+    </div>
+    <div class="form-group mb-3 row">
+        <label for="" class="form-label col-sm-2 text-end">Message : </label>
+        <div class="col-sm-10">
+            <textarea type="text" name="message"
+                placeholder="Message"><?= isset($contact['message']) ? $contact['message'] : ''; ?></textarea>
+        </div>
+    </div>
+    <div>
+        <div class="form-group mb-3">
+            <div class="offset-2 col-sm-10">
+                <button class="btn btn-danger" type="reset">Annuler</button>
+                <button class="btn btn-success" type="submit">Envoyer</button>
+            </div>
+        </div>
+</form>

@@ -1,0 +1,31 @@
+format 224
+
+classcanvas 128003 class_ref 128131 // User
+  simpleclassdiagramsettings end
+  xyz 59 160 2000
+end
+classcanvas 128131 class_ref 128259 // API
+  simpleclassdiagramsettings end
+  xyz 512 272 2000
+end
+subject 128259 ""
+  color blue  xyzwh 186 94 2000 266 260
+usecasecanvas 128387 usecase_ref 128131 // afficherFluxRSS
+  xyzwh 251 220 3005 125 123 label_xy 273 278
+end
+classcanvas 128771 class_ref 135683 // FluxDB
+  simpleclassdiagramsettings end
+  xyz 504 130 2000
+end
+usecasecanvas 129539 usecase_ref 134659 // gererLienRSS
+  xyzwh 272 102 3005 105 83 label_xy 286 142
+end
+line 129411 ----
+  from ref 128387 z 3006 to ref 128131
+line 129667 ----
+  from ref 128003 z 3006 to ref 129539
+line 129795 ----
+  from ref 129539 z 3006 to ref 128771
+line 130051 ----
+  from ref 128003 z 3006 to ref 128387
+end

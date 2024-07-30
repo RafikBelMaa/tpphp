@@ -1,0 +1,6 @@
+<div class="alert alert-success">
+    Connexion réussie <br/>
+</div>
+<h2>
+    Bienvenue <?= (Session::getUser()) ? Session::getUser()->login : "" ?>
+</h2>

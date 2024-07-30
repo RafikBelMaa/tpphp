@@ -1,0 +1,12 @@
+window_sizes 958 1000 129 824 850 104
+
+diagrams
+  active  sequencediagram_ref 128258 // seq
+    659 680 100 A4 0 0
+end
+show_stereotypes
+selected sequencediagram_ref 128258 // seq
+open
+  usecaseview_ref 128130 // uc
+end
+end

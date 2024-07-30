@@ -1,0 +1,20 @@
+format 224
+
+subject 128002 ""
+  color lightgreen  xyzwh 194 125 2000 372 235
+classcanvas 128130 class_ref 128002 // user
+  simpleclassdiagramsettings end
+  xyz 75 189 2000
+end
+usecasecanvas 128258 usecase_ref 134530 // meteo
+  xyzwh 333 195 3005 77 57 label_xy 357 219
+end
+classcanvas 128386 class_ref 141954 // API
+  simpleclassdiagramsettings end
+  xyz 649 186 2000
+end
+line 128514 ----
+  from ref 128130 z 3006 to ref 128258
+line 128642 ----
+  from ref 128258 z 3006 to ref 128386
+end

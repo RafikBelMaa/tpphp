@@ -1,0 +1,29 @@
+window_sizes 1271 742 252 1014 611 85
+
+diagrams
+  usecasediagram_ref 128002 // uc
+    1077 600 100 A4 0 0
+  sequencediagram_ref 128130 // seq
+    1791 717 100 A4 60 0
+  classdiagram_ref 128258 // class
+    826 512 100 A4 0 0
+  sequencediagram_ref 134786 // seq2
+    1205 825 100 A4 155 0
+  sequencediagram_ref 141314 // seq_auth
+    1019 611 100 A4 216 0
+  active  sequencediagram_ref 147842 // meteo
+    1014 611 100 A4 0 0
+  usecasediagram_ref 147970 // meteo
+    114 86 100 A4 0 0
+  classdiagram_ref 148098 // meteo
+    114 86 100 A4 0 0
+end
+show_stereotypes
+selected sequencediagram_ref 147842 // meteo
+open
+  class_ref 142082 // CtrlMeteo
+  class_ref 142210 // ModelMeteo
+  class_ref 142338 // DAO_JSON
+  class_ref 142466 // ViewMeteo
+end
+end

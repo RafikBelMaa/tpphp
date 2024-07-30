@@ -1,0 +1,30 @@
+<?php if (!$error): ?>
+
+
+<h2><?= $data ["city_info"]["name"] ?></h2>
+<h3><?= $data ["current_condition"]["date"] ?></h3>
+
+<table class="table">
+    <tr>
+        <th>Jour</th>
+        <th>Icone</th>
+        <th>Cond.</th>
+        <th>Tmin</th>
+        <th>Tmax</th>
+    </tr>
+        <?php foreach($data as $prev => $day) : ?>
+            <?php if (str_starts_with($prev, 'fcst')) : ?>
+                <tr>
+                    <td><?= $day['day_short'] ?></td>
+                    <td><img src="<?= $day['icon'] ?>"></td>
+                    <td><?= $day['condition'] ?></td>
+                    <td><?= $day['tmin'] ?></td>
+                    <td><?= $day['tmax'] ?></td>
+                </tr>
+            <?php endif ?>
+        <?php endforeach ?>    
+
+</table>
+<?php else : ?>
+<h3><?= $data ?></h3>
+<?php endif ?>
