@@ -1,14 +1,18 @@
 window_sizes 1920 1009 129 1786 859 104
 
 diagrams
-  usecasediagram_ref 128131 // rss
-    659 678 100 A4 0 0
   active  sequencediagram_ref 128259 // seq
-    1786 859 100 A4 12 0
+    1786 859 100 A4 0 0
+  classdiagram_ref 134787 // RSS
+    952 687 100 A4 0 0
 end
 show_stereotypes
-selected sequencediagram_ref 128259 // seq
+selected usecasediagram_ref 128131 // rss
 open
-  usecaseview_ref 128131 // uc
+  class_ref 128387 // View
+  class_ref 128515 // ModelRSS
+  class_ref 128643 // CtrlRSS
+  class_ref 135171 // DAORSS
+  class_ref 135427 // DAODB
 end
 end

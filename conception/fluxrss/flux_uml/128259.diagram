@@ -3,7 +3,7 @@ format 224
 classinstance 128003 class_ref 128131 // User
   name ""   xyz 13 6 2000 life_line_z 2000
 classinstance 128259 class_ref 128387 // View
-  name ""   xyz 110 116 2000 life_line_z 2010
+  name "ViewRSS"   xyz 91 116 2000 life_line_z 2010
 classinstance 128771 class_ref 128515 // ModelRSS
   name ""   xyz 322 24 2005 life_line_z 2000
 classinstance 129155 class_ref 128643 // CtrlRSS
@@ -50,13 +50,13 @@ end
 durationcanvas 140035 classinstance_ref 136451 // :API
   xyzwh 516 517 2010 11 117
 end
-durationcanvas 140675 classinstance_ref 128259 // :View
+durationcanvas 140675 classinstance_ref 128259 // ViewRSS:View
   xyzwh 129 589 2010 11 110
 end
-durationcanvas 141699 classinstance_ref 128259 // :View
+durationcanvas 141699 classinstance_ref 128259 // ViewRSS:View
   xyzwh 129 237 2010 11 64
 end
-durationcanvas 142211 classinstance_ref 128259 // :View
+durationcanvas 142211 classinstance_ref 128259 // ViewRSS:View
   xyzwh 129 718 2020 11 134
 end
 msg 130307 synchronous
