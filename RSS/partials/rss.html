@@ -1,0 +1,20 @@
+<div>
+  <form action="" method="post">
+      <input type="text" placeholder="Titre" value="">
+      <input type="text" placeholder="URL" value="">
+      <button class="btn btn-primary" >enregistrer</button>
+
+  </form>
+</div>
+<div>
+  
+  <form action="/CtrlRSS/getRSS" method="post">
+      <select name="">
+          <?php foreach($data as $item) : ?>
+              <option value="<?= $item["url"] ?>"><?= $item["titre"] ?></option>
+          <?php endforeach ?>
+      </select>
+      <button class="btn btn-primary" type="submit">Selectionner</button>
+  </form>
+
+</div>
