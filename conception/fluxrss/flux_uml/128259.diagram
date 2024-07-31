@@ -1,185 +1,309 @@
 format 224
 
 classinstance 128003 class_ref 128131 // User
-  name ""   xyz 13 6 2000 life_line_z 2000
+  name ""   xyz 13 6 2000 life_line_z 2010
 classinstance 128259 class_ref 128387 // View
-  name "ViewRSS"   xyz 91 116 2000 life_line_z 2010
+  name "ViewRSS"   xyz 110 60 2000 life_line_z 2020
 classinstance 128771 class_ref 128515 // ModelRSS
-  name ""   xyz 322 24 2005 life_line_z 2000
+  name ""   xyz 367 19 2005 life_line_z 2000
 classinstance 129155 class_ref 128643 // CtrlRSS
-  name ""   xyz 222 21 2000 life_line_z 2010
+  name ""   xyz 267 19 2000 life_line_z 2020
 classinstance 132995 class_ref 135427 // DAODB
-  name ""   xyz 444 15 2000 life_line_z 2000
+  name ""   xyz 524 19 2000 life_line_z 2000
 classinstance 133507 class_ref 135683 // FluxDB
-  name ""   xyz 540 8 2000 life_line_z 2000
+  name ""   xyz 645 13 2000 life_line_z 2000
 classinstance 134147 class_ref 135171 // DAORSS
-  name ""   xyz 395 249 2010 life_line_z 2000
+  name ""   xyz 451 72 2010 life_line_z 2000
 classinstance 136451 class_ref 128259 // API
-  name ""   xyz 510 338 2000 life_line_z 2000
+  name ""   xyz 599 55 2000 life_line_z 2000
 fragment 142083 ""
-  color verylightorange xyzwh 28 653 2000 321 227
-  separator 5000
+  color verylightorange xyzwh 19 411 2000 312 206
+  separator 4930
 end
-durationcanvas 130051 classinstance_ref 128003 // :User
-  xyzwh 22 66 2010 11 349
+note 142723 "Logique pour récupérer et afficher tous les \"select\" du formulaire aux chargement de la page ..."
+  xyzwh 671 141 2000 161 93
+note 142851 "Logique pour afficher le flux RSS du lien choisi par l'utilisateur (au dessus) ..."
+  xyzwh 696 416 2000 135 93
+note 144387 "Logique pour récupérer un select dans la liste ainsi qu'un flux rss associé et les renvoyés vers l'utilisateur..."
+  xyzwh 684 295 2000 147 93
+fragment 160771 ""
+  color verylightorange xyzwh 35 945 0 259 159
+  separator 5312
 end
-durationcanvas 130179 classinstance_ref 129155 // :CtrlRSS
-  xyzwh 242 66 2010 11 260
-end
-durationcanvas 130947 classinstance_ref 128771 // :ModelRSS
-  xyzwh 348 110 2010 11 236
-end
-durationcanvas 133123 classinstance_ref 132995 // :DAODB
-  xyzwh 464 153 2010 11 113
-end
-durationcanvas 133635 classinstance_ref 133507 // :FluxDB
-  xyzwh 555 171 2010 11 57
-end
+note 162435 "Logique pour enregistrer un flux RSS ( En parametre un Titre et un lien) dans la base de donnée."
+  xyzwh 697 717 2000 111 191
 durationcanvas 139139 classinstance_ref 128003 // :User
-  xyzwh 22 481 2010 11 402
+  xyzwh 22 118 2010 11 455
 end
 durationcanvas 139267 classinstance_ref 129155 // :CtrlRSS
-  xyzwh 242 482 2015 11 402
+  xyzwh 287 118 2015 11 428
 end
 durationcanvas 139523 classinstance_ref 128771 // :ModelRSS
-  xyzwh 348 478 2010 11 188
+  xyzwh 393 228 2010 11 173
 end
 durationcanvas 139779 classinstance_ref 134147 // :DAORSS
-  xyzwh 419 517 2010 11 140
+  xyzwh 475 241 2010 11 167
 end
 durationcanvas 140035 classinstance_ref 136451 // :API
-  xyzwh 516 517 2010 11 117
+  xyzwh 605 245 2010 11 161
 end
 durationcanvas 140675 classinstance_ref 128259 // ViewRSS:View
-  xyzwh 129 589 2010 11 110
-end
-durationcanvas 141699 classinstance_ref 128259 // ViewRSS:View
-  xyzwh 129 237 2010 11 64
+  xyzwh 148 425 2010 11 84
 end
 durationcanvas 142211 classinstance_ref 128259 // ViewRSS:View
-  xyzwh 129 718 2020 11 134
+  xyzwh 148 535 2020 11 81
 end
-msg 130307 synchronous
-  from durationcanvas_ref 130051
-  to durationcanvas_ref 130179
-  yz 66 2015 explicitmsg "getListe()"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 100 52
-msg 131075 synchronous
-  from durationcanvas_ref 130179
-  to durationcanvas_ref 130947
-  yz 110 2015 explicitmsg "selectListe()"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  args "flux"
-  label_xy 262 88
-msg 133251 synchronous
-  from durationcanvas_ref 130947
-  to durationcanvas_ref 133123
-  yz 153 2015 explicitmsg "requete(sql)"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 379 139
-msg 133763 synchronous
-  from durationcanvas_ref 133123
-  to durationcanvas_ref 133635
-  yz 173 2020 explicitmsg "requete(sql)"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 494 159
+durationcanvas 142979 classinstance_ref 128771 // :ModelRSS
+  xyzwh 393 133 2010 11 73
+end
+durationcanvas 143491 classinstance_ref 132995 // :DAODB
+  xyzwh 544 155 2010 11 70
+end
+durationcanvas 143747 classinstance_ref 133507 // :FluxDB
+  xyzwh 660 166 2010 11 51
+end
+durationcanvas 158211 classinstance_ref 128003 // :User
+  xyzwh 22 688 2020 11 711
+end
+durationcanvas 158339 classinstance_ref 129155 // :CtrlRSS
+  xyzwh 287 689 2025 11 693
+end
+durationcanvas 158595 classinstance_ref 128771 // :ModelRSS
+  xyzwh 393 698 2010 11 113
+end
+durationcanvas 158851 classinstance_ref 132995 // :DAODB
+  xyzwh 544 724 2010 11 72
+end
+durationcanvas 159107 classinstance_ref 133507 // :FluxDB
+  xyzwh 660 730 2010 11 92
+end
+durationcanvas 160131 classinstance_ref 128259 // ViewRSS:View
+  xyzwh 148 957 2025 11 54
+end
+durationcanvas 160899 classinstance_ref 128259 // ViewRSS:View
+  xyzwh 148 1048 2025 11 40
+end
+durationcanvas 161283 classinstance_ref 128771 // :ModelRSS
+  xyzwh 393 831 2010 11 92
+end
+durationcanvas 161539 classinstance_ref 132995 // :DAODB
+  xyzwh 544 843 2010 11 68
+end
+durationcanvas 161795 classinstance_ref 133507 // :FluxDB
+  xyzwh 660 855 2010 11 57
+end
 msg 139395 synchronous
   from durationcanvas_ref 139139
   to durationcanvas_ref 139267
-  yz 483 2020 explicitmsg "getRSS()"
+  yz 131 2020 explicitmsg "getRSS()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  args "post"
-  label_xy 150 464
+  args "arg"
+  label_xy 75 115
 msg 139651 synchronous
   from durationcanvas_ref 139267
   to durationcanvas_ref 139523
-  yz 502 2020 explicitmsg "selectRSS()"
+  yz 255 2020 explicitmsg "selectRSS()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  args "post"
-  label_xy 265 480
+  args "arg"
+  label_xy 313 234
 msg 139907 synchronous
   from durationcanvas_ref 139523
   to durationcanvas_ref 139779
-  yz 518 2015 explicitmsg "requete()"
+  yz 287 2015 explicitmsg "requete()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 365 504
+  args "url"
+  label_xy 417 268
 msg 140163 synchronous
   from durationcanvas_ref 139779
   to durationcanvas_ref 140035
-  yz 545 2015 explicitmsg "requete()"
+  yz 336 2015 explicitmsg "requete()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 449 523
+  label_xy 526 318
 msg 140291 return
   from durationcanvas_ref 140035
   to durationcanvas_ref 139779
-  yz 587 2015 explicitmsg "xml"
+  yz 364 2015 explicitmsg "xml"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 463 573
+  label_xy 584 350
 msg 140419 return
   from durationcanvas_ref 139779
   to durationcanvas_ref 139523
-  yz 606 2015 explicitmsg "array"
+  yz 383 2015 explicitmsg "array"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 379 592
+  label_xy 433 369
 msg 140547 return
   from durationcanvas_ref 139523
   to durationcanvas_ref 139267
-  yz 631 2015 explicitmsg "array"
+  yz 390 2015 explicitmsg "array"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 293 617
+  label_xy 325 371
 msg 140803 synchronous
   from durationcanvas_ref 139267
   to durationcanvas_ref 140675
-  yz 669 2020 explicitmsg "afficherRSS()"
+  yz 477 2020 explicitmsg "afficherRSS()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 158 655
+  args "liste, array"
+  label_xy 163 463
 msg 140931 return
   from durationcanvas_ref 140675
   to durationcanvas_ref 139139
-  yz 686 2025 explicitmsg "html"
+  yz 498 2025 explicitmsg "html"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 72 672
-msg 141315 return
-  from durationcanvas_ref 133635
-  to durationcanvas_ref 133123
-  yz 197 2015 explicitmsg "data"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 505 183
-msg 141443 return
-  from durationcanvas_ref 133123
-  to durationcanvas_ref 130947
-  yz 224 2020 explicitmsg "data"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 401 210
-msg 141571 return
-  from durationcanvas_ref 130947
-  to durationcanvas_ref 130179
-  yz 237 2015 explicitmsg "data"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 290 223
-msg 141827 synchronous
-  from durationcanvas_ref 130179
-  to durationcanvas_ref 141699
-  yz 257 2020 explicitmsg "afficherListe()"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 162 243
-msg 141955 return
-  from durationcanvas_ref 141699
-  to durationcanvas_ref 130051
-  yz 290 2015 explicitmsg "html"
-  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 72 276
+  label_xy 104 482
 msg 142339 synchronous
   from durationcanvas_ref 139267
   to durationcanvas_ref 142211
-  yz 794 2025 explicitmsg "afficherNotRSS"
+  yz 535 2025 explicitmsg "afficherNotRSS"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 154 780
+  label_xy 182 525
 msg 142595 return
   from durationcanvas_ref 142211
   to durationcanvas_ref 139139
-  yz 821 2030 explicitmsg "HTML"
+  yz 562 2030 explicitmsg "HTML"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 68 807
+  label_xy 97 548
+msg 143107 synchronous
+  from durationcanvas_ref 139267
+  to durationcanvas_ref 142979
+  yz 145 2020 explicitmsg "selecListe()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 309 126
+msg 143619 synchronous
+  from durationcanvas_ref 142979
+  to durationcanvas_ref 143491
+  yz 156 3005 explicitmsg "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 417 143
+msg 143875 synchronous
+  from durationcanvas_ref 143491
+  to durationcanvas_ref 143747
+  yz 167 2020 explicitmsg "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 558 156
+msg 144003 return
+  from durationcanvas_ref 143747
+  to durationcanvas_ref 143491
+  yz 186 2015 explicitmsg "data"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 587 176
+msg 144131 return
+  from durationcanvas_ref 143491
+  to durationcanvas_ref 142979
+  yz 188 2020 explicitmsg "data"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 441 180
+msg 144259 return
+  from durationcanvas_ref 142979
+  to durationcanvas_ref 139267
+  yz 191 2020 explicitmsg "Liste"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 328 182
+msg 158467 synchronous
+  from durationcanvas_ref 158211
+  to durationcanvas_ref 158339
+  yz 689 2025 explicitmsg "enregRSS()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "arg"
+  label_xy 173 666
+msg 158723 synchronous
+  from durationcanvas_ref 158339
+  to durationcanvas_ref 158595
+  yz 699 2030 explicitmsg "regRSS()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "arg"
+  label_xy 319 685
+msg 158979 synchronous
+  from durationcanvas_ref 158595
+  to durationcanvas_ref 158851
+  yz 726 2015 explicitmsg "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 421 710
+msg 159235 synchronous
+  from durationcanvas_ref 158851
+  to durationcanvas_ref 159107
+  yz 732 2020 explicitmsg "requete"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 564 720
+msg 159619 return
+  from durationcanvas_ref 159107
+  to durationcanvas_ref 158851
+  yz 767 2015 explicitmsg "data(ok)"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 564 753
+msg 159875 return
+  from durationcanvas_ref 158851
+  to durationcanvas_ref 158595
+  yz 785 2020 explicitmsg "(ok)"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 447 766
+msg 160003 return
+  from durationcanvas_ref 158595
+  to durationcanvas_ref 158339
+  yz 788 2030 explicitmsg "(ok)"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 340 774
+msg 160259 synchronous
+  from durationcanvas_ref 158339
+  to durationcanvas_ref 160131
+  yz 964 2030 explicitmsg "afficherRSS(liste, array)"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 169 952
+msg 160643 return
+  from durationcanvas_ref 160131
+  to durationcanvas_ref 158211
+  yz 1000 2035 explicitmsg "html"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 81 986
+msg 161027 synchronous
+  from durationcanvas_ref 158339
+  to durationcanvas_ref 160899
+  yz 1059 2030 explicitmsg "afficherNotRSS"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 186 1045
+msg 161155 return
+  from durationcanvas_ref 160899
+  to durationcanvas_ref 158211
+  yz 1076 2035 explicitmsg "html"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 81 1062
+msg 161411 synchronous
+  from durationcanvas_ref 158339
+  to durationcanvas_ref 161283
+  yz 831 2030 explicitmsg "selecListe()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 317 817
+msg 161667 synchronous
+  from durationcanvas_ref 161283
+  to durationcanvas_ref 161539
+  yz 845 2015 explicitmsg "requete()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  args "sql"
+  label_xy 417 831
+msg 161923 synchronous
+  from durationcanvas_ref 161539
+  to durationcanvas_ref 161795
+  yz 857 2020 explicitmsg "requete"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 570 844
+msg 162051 return
+  from durationcanvas_ref 161795
+  to durationcanvas_ref 161539
+  yz 895 2015 explicitmsg "data"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 597 881
+msg 162179 return
+  from durationcanvas_ref 161539
+  to durationcanvas_ref 161283
+  yz 900 2020 explicitmsg "data"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 434 886
+msg 162307 return
+  from durationcanvas_ref 161283
+  to durationcanvas_ref 158339
+  yz 906 2030 explicitmsg "Liste"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 334 892
 end

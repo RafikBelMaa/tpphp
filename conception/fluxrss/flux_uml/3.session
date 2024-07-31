@@ -1,13 +1,13 @@
-window_sizes 1920 1009 129 1786 859 104
+window_sizes 1920 974 403 1512 928 0
 
 diagrams
   active  sequencediagram_ref 128259 // seq
-    1786 859 100 A4 0 0
-  classdiagram_ref 134787 // RSS
-    952 687 100 A4 0 0
+    1512 928 100 A4 0 0
+  usecasediagram_ref 128131 // rss
+    1512 859 100 A4 0 0
 end
 show_stereotypes
-selected usecasediagram_ref 128131 // rss
+selected classdiagram_ref 134787 // rss
 open
   class_ref 128387 // View
   class_ref 128515 // ModelRSS

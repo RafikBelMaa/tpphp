@@ -1,6 +1,6 @@
 format 224
-"flux"
-  revision 3
+"flux_uml"
+  revision 6
   modified_by 3 "rafik"
 
 
@@ -138,6 +138,35 @@ ${members}}
       explicit_switch_type ""
       mysql_decl ""
       
+      classrelation 135427 // <aggregation>
+	relation_ref 134915 // <aggregation>
+      end
+
+      operation 134787 "afficherRSS"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 134915 "afficherNotRSS"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
     end
 
     class 128515 "ModelRSS"
@@ -152,6 +181,108 @@ ${members}}
       explicit_switch_type ""
       mysql_decl ""
       
+      classrelation 134531 // <aggregation>
+	relation 134531 o---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134531 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134659 // <aggregation>
+      end
+
+      classrelation 134787 // <aggregation>
+	relation 134659 o---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134787 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134915 // <aggregation>
+      end
+
+      classrelation 135171 // <aggregation>
+	relation_ref 134787 // <aggregation>
+      end
+
+      attribute 134787 "CtrlRSS"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 134531 "selecListe"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 134659 "selectRSS"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135043 "regRSS"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 141699 "DAORSS"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 141827 "DAODB"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
     end
 
     class 128643 "CtrlRSS"
@@ -166,6 +297,79 @@ ${members}}
       explicit_switch_type ""
       mysql_decl ""
       
+      classrelation 135043 // <aggregation>
+	relation 134787 o---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 135043 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 135171 // <aggregation>
+      end
+
+      classrelation 135299 // <aggregation>
+	relation 134915 o---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 135299 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 135427 // <aggregation>
+      end
+
+      attribute 141571 "View"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 135171 "getRSS"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 135299 "enregRSS"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      attribute 141955 "ModelRSS"
+	private explicit_type ""
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
     end
 
     class 135171 "DAORSS"
@@ -180,6 +384,22 @@ ${members}}
       explicit_switch_type ""
       mysql_decl ""
       
+      classrelation 134659 // <aggregation>
+	relation_ref 134531 // <aggregation>
+      end
+
+      operation 135555 "requete"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
     end
 
     class 135299 "daodb"
@@ -208,6 +428,22 @@ ${members}}
       explicit_switch_type ""
       mysql_decl ""
       
+      classrelation 134915 // <aggregation>
+	relation_ref 134659 // <aggregation>
+      end
+
+      operation 135427 "requete"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
     end
 
     class 135555 "USERDB"
@@ -259,6 +495,16 @@ ${members}}
       
       activitydiagramsettings
        end
+    end
+
+    classdiagram 134787 "rss"
+      classdiagramsettings member_max_width 0 end
+      size A4
+    end
+
+    usecasediagram 141443 "regrss"
+      usecasediagramsettings end
+      size A4
     end
   end
 end
